@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deezul Components</title>
+    <!-- Inline so the browser stops requesting (and 404ing) /favicon.ico. Swap in a
+         real /favicon.ico here whenever the library gets a proper mark. -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%235b5ef0'/%3E%3Ctext x='16' y='22' font-family='system-ui,sans-serif' font-size='18' font-weight='700' fill='white' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="/assets/tokens.css">
+    <!-- Icons as CSS custom properties (generated from assets/icons/*.svg). Linked on the page
+         so the properties inherit into every component's shadow root. -->
+    <link rel="stylesheet" href="/assets/icons.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; }
+        body { font-family: var(--dz-font-body); background: var(--dz-color-bg); color: var(--dz-color-text); }
+        #app { height: 100%; }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <!-- Absolute path: deep links like /c/button are served this same shell by the dev
+         server's history fallback, where a relative "main.js" would resolve to /c/main.js. -->
+    <script type="module" src="/main.js"></script>
+</body>
+</html>

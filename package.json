@@ -1,0 +1,26 @@
+{
+  "name": "deezul-components",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A reusable Deezul component library with a live gallery for developing and previewing blocks.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S-t-u-r-m/deezul-components.git"
+  },
+  "scripts": {
+    "icons": "node scripts/build-icons.mjs",
+    "dev": "node scripts/build-icons.mjs && node dev.js",
+    "build": "node scripts/build-icons.mjs && deezul-build",
+    "serve": "npx -y http-server dist -p 8082 -c-1",
+    "test": "npm run build && node tests/run.mjs",
+    "test:only": "node tests/run.mjs"
+  },
+  "dependencies": {
+    "deezul": "github:S-t-u-r-m/deezul"
+  },
+  "devDependencies": {
+    "axe-core": "^4.13.0"
+  }
+}

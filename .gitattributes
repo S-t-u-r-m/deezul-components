@@ -1,0 +1,6 @@
+# Keep LF in the repository and in checkouts, whatever core.autocrlf says.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.woff2 binary

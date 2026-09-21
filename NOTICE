@@ -1,0 +1,24 @@
+Deezul Components
+Copyright (c) 2026 Jonathan Wollenberg
+
+This project is licensed under the MIT License (see LICENSE), except for the third-party
+material listed below, which keeps its own license.
+
+--------------------------------------------------------------------------------------------
+Material Symbols
+Copyright Google LLC
+Licensed under the Apache License, Version 2.0
+https://github.com/google/material-design-icons
+https://www.apache.org/licenses/LICENSE-2.0
+
+These icons in assets/icons/ are Material Symbols, used unmodified:
+
+  add, arrow_downward, arrow_upward, calendar_today, call, chevron_left, chevron_right,
+  close, delete, description, edit, groups, home, location_on, mail, menu, move, pause,
+  payments, play_arrow, print, schedule, search, settings, share
+
+assets/icons.css is generated from them (scripts/build-icons.mjs) and carries them too.
+
+The other icons in assets/icons/ (check_circle, emergency, error, info, warning) and the
+demo illustrations in assets/demo/ are original to this project and covered by the MIT
+License.

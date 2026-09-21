@@ -1,0 +1,31 @@
+/*
+ * tokens.css — the design tokens every component in this library reads.
+ *
+ * Defined on :root so they inherit THROUGH shadow boundaries: a component styles
+ * itself with var(--dz-color-primary, <fallback>) and picks up whichever app it is
+ * dropped into. Always give the var() a literal fallback so a component still looks
+ * right in a host that never loaded this file.
+ */
+:root {
+    /* Color */
+    --dz-color-bg:        #f7f7fb;
+    --dz-color-surface:   #ffffff;
+    --dz-color-text:      #2b2f3a;
+    --dz-color-heading:   #1f2330;
+    --dz-color-muted:     #6b7180;
+    --dz-color-border:    #e4e6ee;
+    --dz-color-primary:   #5b5ef0;
+    --dz-color-secondary: #6b7180;
+    --dz-color-link:      #5b5ef0;
+    --dz-color-danger:    #c0455b;
+    --dz-color-success:   #2f9e44;
+
+    /* Type */
+    --dz-font-body:    system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --dz-font-heading: var(--dz-font-body);
+    --dz-font-mono:    ui-monospace, 'Cascadia Code', 'Source Code Pro', 'Courier New', monospace;
+
+    /* Shape */
+    --dz-radius: 8px;
+    --dz-shadow: 0 2px 4px rgba(0,0,0,.05), 0 18px 40px -24px rgba(0,0,0,.35);
+}
