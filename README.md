@@ -29,7 +29,8 @@ routes.config.js      URL → view
 catalog.config.js     what the gallery shows, and the demo props for each component
 assets/tokens.css     the --dz-* design tokens all components paint from
 src/
-  component/          the library — this is the part you reuse in other projects
+  component/          the library — this is the part you reuse in other projects,
+                      one folder per gallery group (controls/, lists/, layout/, news/ …)
   view/               the gallery screens (index + per-component workbench)
   layout/             the gallery chrome
 ```
@@ -40,8 +41,9 @@ src/
 
 Three edits:
 
-1. **`src/component/Thing.js`** — the component itself.
-2. **`modules.config.js`** — `{ ref: 'dz-thing', src: 'component/Thing.js' }`.
+1. **`src/component/<group>/Thing.js`** — the component itself, in the folder for its
+   gallery group (make a new folder for a new group).
+2. **`modules.config.js`** — `{ ref: 'dz-thing', src: 'component/<group>/Thing.js' }`.
    The `ref` is the `dz-type` templates use to mount it; `src` is the file under `src/`
    (deezul maps it to the compiled module — never write a compiled path).
 3. **`catalog.config.js`** — a gallery entry with a `demos` array: one entry per state
@@ -50,7 +52,7 @@ Three edits:
 
 Then `/c/dz-thing` is its workbench page.
 
-[`src/component/Button.js`](src/component/Button.js) is the worked example — copy its
+[`src/component/controls/Button.js`](src/component/controls/Button.js) is the worked example — copy its
 shape. Delete it once you have components of your own (remove its lines from the two
 config files too).
 
@@ -68,7 +70,7 @@ config files too).
 
 ## Reusing these elsewhere
 
-Copy the `src/component/*.js` files into the target app's `src/component/`, add their
+Copy the `src/component/` folders into the target app's `src/component/`, add their
 lines to that app's `modules.config.js`, and make sure it defines the `--dz-*` tokens
 they read (or rely on the fallbacks). The files are plain Deezul source — the consuming
 app compiles them with its own `deezul-dev` / `deezul-build`.
